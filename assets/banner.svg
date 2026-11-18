@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 320" width="100%" role="img" aria-label="Cristian Acalo - Full Stack Developer">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b0e1a" />
+      <stop offset="100%" stop-color="#0f1323" />
+    </linearGradient>
+
+    <linearGradient id="roleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#818cf8" />
+      <stop offset="55%" stop-color="#a855f7" />
+      <stop offset="100%" stop-color="#d946ef" />
+    </linearGradient>
+
+    <filter id="auroraBlur" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="55" />
+    </filter>
+
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M 32 0 L 0 0 0 32" fill="none" stroke="#1e2d47" stroke-width="0.7" opacity="0.35" />
+    </pattern>
+
+    <clipPath id="cardClip">
+      <rect x="0" y="0" width="1200" height="320" rx="16" />
+    </clipPath>
+
+    <style>
+      .sans { font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif; }
+      .mono { font-family: ui-monospace, 'Cascadia Code', 'Fira Code', Menlo, monospace; }
+      @keyframes driftA {
+        0%, 100% { transform: translate(0px, 0px) scale(1); }
+        50% { transform: translate(35px, -20px) scale(1.08); }
+      }
+      @keyframes driftB {
+        0%, 100% { transform: translate(0px, 0px) scale(1); }
+        50% { transform: translate(-30px, 22px) scale(1.1); }
+      }
+      @keyframes pulseDot {
+        0%, 100% { opacity: 1; }
+        50% { opacity: 0.35; }
+      }
+      .orb-a { animation: driftA 11s ease-in-out infinite; transform-origin: center; }
+      .orb-b { animation: driftB 14s ease-in-out infinite; transform-origin: center; }
+      .dot-live { animation: pulseDot 2.4s ease-in-out infinite; }
+    </style>
+  </defs>
+
+  <g clip-path="url(#cardClip)">
+    <rect width="1200" height="320" fill="url(#bgGrad)" />
+    <rect width="1200" height="320" fill="url(#grid)" />
+
+    <circle class="orb-a" cx="190" cy="70" r="145" fill="#6366f1" opacity="0.24" filter="url(#auroraBlur)" />
+    <circle class="orb-b" cx="520" cy="270" r="135" fill="#a855f7" opacity="0.18" filter="url(#auroraBlur)" />
+    <circle class="orb-a" cx="1010" cy="90" r="150" fill="#d946ef" opacity="0.20" filter="url(#auroraBlur)" />
+
+    <rect x="64" y="54" width="234" height="32" rx="16" fill="#131929" fill-opacity="0.85" stroke="#283757" stroke-width="1" />
+    <circle class="dot-live" cx="84" cy="70" r="4.5" fill="#818cf8" />
+    <text x="99" y="75" fill="#cbd5e1" font-size="13" font-weight="500" class="mono">Evaluar · Latacunga, EC</text>
+
+    <text x="64" y="148" fill="#f8fafc" font-size="54" font-weight="800" letter-spacing="-1.2" class="sans">Cristian Acalo</text>
+    <text x="64" y="192" fill="url(#roleGrad)" font-size="22" font-weight="700" class="sans">Full Stack · Sistemas Event-Driven · IA Aplicada</text>
+    <text x="64" y="238" fill="#94a3b8" font-size="15" class="mono">Go · TypeScript · Nuxt · AWS Serverless · Cloudflare Workers</text>
+
+    <rect x="700" y="46" width="436" height="228" rx="14" fill="#131929" fill-opacity="0.82" stroke="#283757" stroke-width="1.2" />
+    <circle cx="726" cy="72" r="5" fill="#475569" />
+    <circle cx="744" cy="72" r="5" fill="#6366f1" />
+    <circle cx="762" cy="72" r="5" fill="#d946ef" />
+    <text x="784" y="76" fill="#64748b" font-size="12.5" class="mono">profile.toml</text>
+    <line x1="700" y1="94" x2="1136" y2="94" stroke="#1e2d47" stroke-width="1" />
+
+    <text x="726" y="128" font-size="13.5" class="mono">
+      <tspan fill="#818cf8">role</tspan><tspan fill="#64748b">  = </tspan><tspan fill="#e2e8f0">"Middle Full Stack @ Evaluar"</tspan>
+    </text>
+    <text x="726" y="158" font-size="13.5" class="mono">
+      <tspan fill="#818cf8">core</tspan><tspan fill="#64748b">  = </tspan><tspan fill="#cbd5e1">["Go", "TypeScript", "Nuxt", "AWS"]</tspan>
+    </text>
+    <text x="726" y="188" font-size="13.5" class="mono">
+      <tspan fill="#818cf8">lab</tspan><tspan fill="#64748b">   = </tspan><tspan fill="#cbd5e1">["relevo", "QuantTrading", "Mori"]</tspan>
+    </text>
+    <text x="726" y="218" font-size="13.5" class="mono">
+      <tspan fill="#818cf8">focus</tspan><tspan fill="#64748b"> = </tspan><tspan fill="#e879f9">"sistemas que corren solos"</tspan>
+    </text>
+    <text x="726" y="248" font-size="13.5" class="mono">
+      <tspan fill="#818cf8">web</tspan><tspan fill="#64748b">   = </tspan><tspan fill="#94a3b8">"cristianacalo.netlify.app"</tspan>
+    </text>
+  </g>
+
+  <rect x="0.5" y="0.5" width="1199" height="319" rx="16" fill="none" stroke="#1e2d47" stroke-width="1" />
+</svg>
