@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 130" width="100%" role="img" aria-label="Cristian Acalo - Construyendo sistemas que corren solos">
+  <defs>
+    <linearGradient id="footBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#070a14" />
+      <stop offset="100%" stop-color="#0e1428" />
+    </linearGradient>
+
+    <linearGradient id="waveGrad1" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#6366f1" stop-opacity="0.28" />
+      <stop offset="50%" stop-color="#a855f7" stop-opacity="0.34" />
+      <stop offset="100%" stop-color="#6366f1" stop-opacity="0.28" />
+    </linearGradient>
+
+    <linearGradient id="waveGrad2" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.22" />
+      <stop offset="50%" stop-color="#d946ef" stop-opacity="0.30" />
+      <stop offset="100%" stop-color="#38bdf8" stop-opacity="0.22" />
+    </linearGradient>
+
+    <clipPath id="footClip">
+      <rect x="0" y="0" width="1200" height="130" rx="16" />
+    </clipPath>
+
+    <style>
+      .mono { font-family: ui-monospace, 'Cascadia Code', 'Fira Code', Menlo, monospace; }
+      @keyframes blinkF {
+        0%, 49% { opacity: 1; }
+        50%, 100% { opacity: 0.1; }
+      }
+      .cur { animation: blinkF 1.05s steps(1, end) infinite; }
+    </style>
+  </defs>
+
+  <g clip-path="url(#footClip)">
+    <rect width="1200" height="130" fill="url(#footBg)" />
+
+    <!-- Animated aurora waves -->
+    <path d="M 0 82 Q 150 50, 300 82 T 600 82 T 900 82 T 1200 82 T 1500 82 T 1800 82 L 1800 130 L 0 130 Z" fill="url(#waveGrad1)">
+      <animateTransform attributeName="transform" type="translate" from="0 0" to="-600 0" dur="10s" repeatCount="indefinite" />
+    </path>
+
+    <path d="M 0 94 Q 100 68, 200 94 T 400 94 T 600 94 T 800 94 T 1000 94 T 1200 94 T 1400 94 T 1600 94 L 1600 130 L 0 130 Z" fill="url(#waveGrad2)">
+      <animateTransform attributeName="transform" type="translate" from="-400 0" to="0 0" dur="8s" repeatCount="indefinite" />
+    </path>
+
+    <!-- Terminal echo CTA -->
+    <circle cx="332" cy="48" r="4" fill="#34d399">
+      <animate attributeName="opacity" values="1;0.35;1" dur="2s" repeatCount="indefinite" />
+    </circle>
+    <text x="348" y="53" font-size="14" class="mono">
+      <tspan fill="#d946ef" font-weight="700">$</tspan>
+      <tspan fill="#818cf8"> echo</tspan>
+      <tspan fill="#e2e8f0"> "Construyendo sistemas que corren solos — hablemos."</tspan>
+    </text>
+    <rect class="cur" x="866" y="40" width="8" height="15" rx="1.5" fill="#d946ef" />
+  </g>
+
+  <rect x="0.5" y="0.5" width="1199" height="129" rx="16" fill="none" stroke="#1e2d47" stroke-width="1" />
+</svg>

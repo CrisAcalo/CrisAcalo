@@ -1,0 +1,159 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 92" width="100%" role="img" aria-label="Stack tecnológico en movimiento">
+  <defs>
+    <linearGradient id="marqBg" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#080c18" />
+      <stop offset="50%" stop-color="#0d1222" />
+      <stop offset="100%" stop-color="#080c18" />
+    </linearGradient>
+
+    <linearGradient id="fadeLeft" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#080c18" stop-opacity="1" />
+      <stop offset="100%" stop-color="#080c18" stop-opacity="0" />
+    </linearGradient>
+
+    <linearGradient id="fadeRight" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#080c18" stop-opacity="0" />
+      <stop offset="100%" stop-color="#080c18" stop-opacity="1" />
+    </linearGradient>
+
+    <clipPath id="marqClip">
+      <rect x="1" y="1" width="1198" height="90" rx="14" />
+    </clipPath>
+
+    <style>
+      .mono { font-family: ui-monospace, 'Cascadia Code', 'Fira Code', Menlo, monospace; }
+    </style>
+
+    <!-- Reusable Lane 1 (width = 1460) -->
+    <g id="lane1">
+      <g transform="translate(0, 12)">
+        <rect x="0" y="0" width="132" height="28" rx="8" fill="#11192e" stroke="#263859" stroke-width="1" />
+        <circle cx="14" cy="14" r="3" fill="#38bdf8" />
+        <text x="26" y="18" fill="#e2e8f0" font-size="11.5" font-weight="600" class="mono">Go · Fiber</text>
+      </g>
+      <g transform="translate(146, 12)">
+        <rect x="0" y="0" width="132" height="28" rx="8" fill="#11192e" stroke="#263859" stroke-width="1" />
+        <circle cx="14" cy="14" r="3" fill="#818cf8" />
+        <text x="26" y="18" fill="#e2e8f0" font-size="11.5" font-weight="600" class="mono">TypeScript</text>
+      </g>
+      <g transform="translate(292, 12)">
+        <rect x="0" y="0" width="132" height="28" rx="8" fill="#11192e" stroke="#263859" stroke-width="1" />
+        <circle cx="14" cy="14" r="3" fill="#34d399" />
+        <text x="26" y="18" fill="#e2e8f0" font-size="11.5" font-weight="600" class="mono">Nuxt · Vue 3</text>
+      </g>
+      <g transform="translate(438, 12)">
+        <rect x="0" y="0" width="132" height="28" rx="8" fill="#11192e" stroke="#263859" stroke-width="1" />
+        <circle cx="14" cy="14" r="3" fill="#f97316" />
+        <text x="26" y="18" fill="#e2e8f0" font-size="11.5" font-weight="600" class="mono">Svelte 5</text>
+      </g>
+      <g transform="translate(584, 12)">
+        <rect x="0" y="0" width="132" height="28" rx="8" fill="#11192e" stroke="#263859" stroke-width="1" />
+        <circle cx="14" cy="14" r="3" fill="#38bdf8" />
+        <text x="26" y="18" fill="#e2e8f0" font-size="11.5" font-weight="600" class="mono">React 19</text>
+      </g>
+      <g transform="translate(730, 12)">
+        <rect x="0" y="0" width="132" height="28" rx="8" fill="#11192e" stroke="#263859" stroke-width="1" />
+        <circle cx="14" cy="14" r="3" fill="#fbbf24" />
+        <text x="26" y="18" fill="#e2e8f0" font-size="11.5" font-weight="600" class="mono">AWS SST</text>
+      </g>
+      <g transform="translate(876, 12)">
+        <rect x="0" y="0" width="132" height="28" rx="8" fill="#11192e" stroke="#263859" stroke-width="1" />
+        <circle cx="14" cy="14" r="3" fill="#a855f7" />
+        <text x="26" y="18" fill="#e2e8f0" font-size="11.5" font-weight="600" class="mono">AWS SQS</text>
+      </g>
+      <g transform="translate(1022, 12)">
+        <rect x="0" y="0" width="132" height="28" rx="8" fill="#11192e" stroke="#263859" stroke-width="1" />
+        <circle cx="14" cy="14" r="3" fill="#fb923c" />
+        <text x="26" y="18" fill="#e2e8f0" font-size="11.5" font-weight="600" class="mono">Cloudflare</text>
+      </g>
+      <g transform="translate(1168, 12)">
+        <rect x="0" y="0" width="132" height="28" rx="8" fill="#11192e" stroke="#263859" stroke-width="1" />
+        <circle cx="14" cy="14" r="3" fill="#60a5fa" />
+        <text x="26" y="18" fill="#e2e8f0" font-size="11.5" font-weight="600" class="mono">PostgreSQL</text>
+      </g>
+      <g transform="translate(1314, 12)">
+        <rect x="0" y="0" width="132" height="28" rx="8" fill="#11192e" stroke="#263859" stroke-width="1" />
+        <circle cx="14" cy="14" r="3" fill="#38bdf8" />
+        <text x="26" y="18" fill="#e2e8f0" font-size="11.5" font-weight="600" class="mono">Docker</text>
+      </g>
+    </g>
+
+    <!-- Reusable Lane 2 (width = 1460) -->
+    <g id="lane2">
+      <g transform="translate(0, 50)">
+        <rect x="0" y="0" width="132" height="28" rx="8" fill="#151329" stroke="#362854" stroke-width="1" />
+        <circle cx="14" cy="14" r="3" fill="#d946ef" />
+        <text x="26" y="18" fill="#e2e8f0" font-size="11.5" font-weight="600" class="mono">Watermill</text>
+      </g>
+      <g transform="translate(146, 50)">
+        <rect x="0" y="0" width="132" height="28" rx="8" fill="#151329" stroke="#362854" stroke-width="1" />
+        <circle cx="14" cy="14" r="3" fill="#34d399" />
+        <text x="26" y="18" fill="#e2e8f0" font-size="11.5" font-weight="600" class="mono">FastAPI</text>
+      </g>
+      <g transform="translate(292, 50)">
+        <rect x="0" y="0" width="132" height="28" rx="8" fill="#151329" stroke="#362854" stroke-width="1" />
+        <circle cx="14" cy="14" r="3" fill="#a855f7" />
+        <text x="26" y="18" fill="#e2e8f0" font-size="11.5" font-weight="600" class="mono">Kotlin KMP</text>
+      </g>
+      <g transform="translate(438, 50)">
+        <rect x="0" y="0" width="132" height="28" rx="8" fill="#151329" stroke="#362854" stroke-width="1" />
+        <circle cx="14" cy="14" r="3" fill="#34d399" />
+        <text x="26" y="18" fill="#e2e8f0" font-size="11.5" font-weight="600" class="mono">Supabase</text>
+      </g>
+      <g transform="translate(584, 50)">
+        <rect x="0" y="0" width="132" height="28" rx="8" fill="#151329" stroke="#362854" stroke-width="1" />
+        <circle cx="14" cy="14" r="3" fill="#818cf8" />
+        <text x="26" y="18" fill="#e2e8f0" font-size="11.5" font-weight="600" class="mono">DynamoDB</text>
+      </g>
+      <g transform="translate(730, 50)">
+        <rect x="0" y="0" width="132" height="28" rx="8" fill="#151329" stroke="#362854" stroke-width="1" />
+        <circle cx="14" cy="14" r="3" fill="#22c55e" />
+        <text x="26" y="18" fill="#e2e8f0" font-size="11.5" font-weight="600" class="mono">Whisper CUDA</text>
+      </g>
+      <g transform="translate(876, 50)">
+        <rect x="0" y="0" width="132" height="28" rx="8" fill="#151329" stroke="#362854" stroke-width="1" />
+        <circle cx="14" cy="14" r="3" fill="#38bdf8" />
+        <text x="26" y="18" fill="#e2e8f0" font-size="11.5" font-weight="600" class="mono">Remotion</text>
+      </g>
+      <g transform="translate(1022, 50)">
+        <rect x="0" y="0" width="132" height="28" rx="8" fill="#151329" stroke="#362854" stroke-width="1" />
+        <circle cx="14" cy="14" r="3" fill="#ec4899" />
+        <text x="26" y="18" fill="#e2e8f0" font-size="11.5" font-weight="600" class="mono">FFmpeg NVENC</text>
+      </g>
+      <g transform="translate(1168, 50)">
+        <rect x="0" y="0" width="132" height="28" rx="8" fill="#151329" stroke="#362854" stroke-width="1" />
+        <circle cx="14" cy="14" r="3" fill="#34d399" />
+        <text x="26" y="18" fill="#e2e8f0" font-size="11.5" font-weight="600" class="mono">Playwright</text>
+      </g>
+      <g transform="translate(1314, 50)">
+        <rect x="0" y="0" width="132" height="28" rx="8" fill="#151329" stroke="#362854" stroke-width="1" />
+        <circle cx="14" cy="14" r="3" fill="#d946ef" />
+        <text x="26" y="18" fill="#e2e8f0" font-size="11.5" font-weight="600" class="mono">Worktrees</text>
+      </g>
+    </g>
+  </defs>
+
+  <g clip-path="url(#marqClip)">
+    <rect width="1200" height="92" fill="url(#marqBg)" />
+
+    <!-- Lane 1 scrolling left -->
+    <g>
+      <use href="#lane1" x="0" y="0" />
+      <use href="#lane1" x="1460" y="0" />
+      <animateTransform attributeName="transform" type="translate" from="0 0" to="-1460 0" dur="28s" repeatCount="indefinite" />
+    </g>
+
+    <!-- Lane 2 scrolling right -->
+    <g>
+      <use href="#lane2" x="0" y="0" />
+      <use href="#lane2" x="1460" y="0" />
+      <animateTransform attributeName="transform" type="translate" from="-1460 0" to="0 0" dur="32s" repeatCount="indefinite" />
+    </g>
+
+    <!-- Edge fades -->
+    <rect x="0" y="0" width="100" height="92" fill="url(#fadeLeft)" />
+    <rect x="1100" y="0" width="100" height="92" fill="url(#fadeRight)" />
+  </g>
+
+  <rect x="0.5" y="0.5" width="1199" height="91" rx="14" fill="none" stroke="#1e2d47" stroke-width="1" />
+</svg>
