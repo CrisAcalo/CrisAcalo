@@ -12,7 +12,7 @@
 
 Soy Cristian. Trabajo como Middle Full Stack en **Evaluar** con Go, Nuxt y arquitectura serverless en AWS y Cloudflare. Antes pasé por core bancario, sistemas financieros y automatización de CRM con agentes sobre WhatsApp.
 
-Fuera de horario construyo herramientas para resolver problemas que me estorban o explorar cosas que me dan curiosidad: orquestadores de agentes, motores de trading, síntesis de audio y pipelines de video.
+Fuera de horario construyo herramientas para resolver problemas de manera automatizada o explorar cosas que me dan curiosidad: orquestadores de agentes, motores de trading, síntesis de audio y pipelines de video.
 
 ```mermaid
 flowchart LR
