@@ -1,61 +1,13 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 560" width="100%" role="img" aria-label="Arquitectura y Ecosistema de Ingeniería - Día en Evaluar y Noche en Lab">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 420" width="100%" role="img" aria-label="Día en Evaluar y Noche en Lab - Diagrama Pixel Art">
   <defs>
-    <linearGradient id="archBg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#070a14" />
+    <linearGradient id="bgSplit" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#091022" />
       <stop offset="50%" stop-color="#0b0e1a" />
-      <stop offset="100%" stop-color="#11152a" />
+      <stop offset="100%" stop-color="#110c22" />
     </linearGradient>
 
-    <radialGradient id="coreHalo" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#a855f7" stop-opacity="0.38" />
-      <stop offset="55%" stop-color="#6366f1" stop-opacity="0.14" />
-      <stop offset="100%" stop-color="#0b0e1a" stop-opacity="0" />
-    </radialGradient>
-
-    <linearGradient id="dayGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#38bdf8" />
-      <stop offset="100%" stop-color="#818cf8" />
-    </linearGradient>
-
-    <linearGradient id="nightGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#a855f7" />
-      <stop offset="100%" stop-color="#d946ef" />
-    </linearGradient>
-
-    <pattern id="archGrid" width="28" height="28" patternUnits="userSpaceOnUse">
-      <circle cx="1" cy="1" r="0.9" fill="#233252" opacity="0.55" />
-    </pattern>
-
-    <filter id="glowCyan" x="-60%" y="-60%" width="220%" height="220%">
-      <feGaussianBlur stdDeviation="3.5" result="blur" />
-      <feMerge>
-        <feMergeNode in="blur" />
-        <feMergeNode in="SourceGraphic" />
-      </feMerge>
-    </filter>
-
-    <filter id="glowPink" x="-60%" y="-60%" width="220%" height="220%">
-      <feGaussianBlur stdDeviation="3.5" result="blur" />
-      <feMerge>
-        <feMergeNode in="blur" />
-        <feMergeNode in="SourceGraphic" />
-      </feMerge>
-    </filter>
-
-    <filter id="ambientBlur" x="-40%" y="-40%" width="180%" height="180%">
-      <feGaussianBlur stdDeviation="55" />
-    </filter>
-
-    <clipPath id="archClip">
-      <rect x="0" y="0" width="1200" height="560" rx="16" />
-    </clipPath>
-
-    <clipPath id="waveClip">
-      <rect x="568" y="478" width="196" height="44" rx="6" />
-    </clipPath>
-
-    <clipPath id="ekgClip">
-      <rect x="958" y="478" width="114" height="44" rx="6" />
+    <clipPath id="mapClip">
+      <rect x="0" y="0" width="1200" height="420" rx="10" />
     </clipPath>
 
     <style>
@@ -64,282 +16,287 @@
     </style>
   </defs>
 
-  <g clip-path="url(#archClip)">
-    <rect width="1200" height="560" fill="url(#archBg)" />
-    <rect width="1200" height="560" fill="url(#archGrid)" />
+  <g clip-path="url(#mapClip)" shape-rendering="crispEdges">
+    <rect width="1200" height="420" fill="url(#bgSplit)" />
 
-    <!-- Ambient corner glows -->
-    <circle cx="140" cy="140" r="160" fill="#38bdf8" opacity="0.10" filter="url(#ambientBlur)" />
-    <circle cx="1060" cy="410" r="170" fill="#d946ef" opacity="0.12" filter="url(#ambientBlur)" />
+    <!-- Subtle pixel dot matrix background -->
+    <line x1="600" y1="20" x2="600" y2="400" stroke="#1e2945" stroke-width="2" stroke-dasharray="4 8" />
 
-    <!-- Top header bar -->
-    <rect x="40" y="20" width="286" height="32" rx="16" fill="#111729" stroke="#263554" stroke-width="1" />
-    <circle cx="60" cy="36" r="4" fill="#38bdf8">
-      <animate attributeName="opacity" values="1;0.35;1" dur="2s" repeatCount="indefinite" />
-    </circle>
-    <text x="74" y="40" fill="#cbd5e1" font-size="11.5" font-weight="600" letter-spacing="0.8" class="mono">SYSTEM TOPOLOGY · DÍA ↔ NOCHE</text>
+    <!-- ================= DAY HEADER: PIXEL SUN + CLOUD ================= -->
+    <g transform="translate(46, 24) scale(4)">
+      <!-- Sun center -->
+      <rect x="3" y="3" width="3" height="3" fill="#fbbf24" />
+      <rect x="2" y="4" width="5" height="1" fill="#f59e0b" />
+      <rect x="4" y="2" width="1" height="5" fill="#f59e0b" />
+      <!-- Pulsing rays -->
+      <g fill="#fde047">
+        <rect x="4" y="0" width="1" height="1">
+          <animate attributeName="opacity" values="1;0.3;1" dur="1.8s" repeatCount="indefinite" />
+        </rect>
+        <rect x="4" y="8" width="1" height="1">
+          <animate attributeName="opacity" values="1;0.3;1" dur="1.8s" repeatCount="indefinite" />
+        </rect>
+        <rect x="0" y="4" width="1" height="1">
+          <animate attributeName="opacity" values="1;0.3;1" dur="1.8s" repeatCount="indefinite" />
+        </rect>
+        <rect x="8" y="4" width="1" height="1">
+          <animate attributeName="opacity" values="1;0.3;1" dur="1.8s" repeatCount="indefinite" />
+        </rect>
+        <rect x="1" y="1" width="1" height="1">
+          <animate attributeName="opacity" values="0.3;1;0.3" dur="1.8s" repeatCount="indefinite" />
+        </rect>
+        <rect x="7" y="1" width="1" height="1">
+          <animate attributeName="opacity" values="0.3;1;0.3" dur="1.8s" repeatCount="indefinite" />
+        </rect>
+        <rect x="1" y="7" width="1" height="1">
+          <animate attributeName="opacity" values="0.3;1;0.3" dur="1.8s" repeatCount="indefinite" />
+        </rect>
+        <rect x="7" y="7" width="1" height="1">
+          <animate attributeName="opacity" values="0.3;1;0.3" dur="1.8s" repeatCount="indefinite" />
+        </rect>
+      </g>
+    </g>
+    <text x="98" y="50" fill="#38bdf8" font-size="14" font-weight="700" class="mono">DÍA · EVALUAR</text>
 
-    <!-- Header status pills -->
-    <rect x="752" y="22" width="128" height="28" rx="14" fill="#111729" stroke="#263554" stroke-width="1" />
-    <circle cx="770" cy="36" r="3" fill="#818cf8">
-      <animate attributeName="opacity" values="1;0.3;1" dur="1.7s" repeatCount="indefinite" />
-    </circle>
-    <text x="782" y="40" fill="#94a3b8" font-size="11" class="mono">EVENT-DRIVEN</text>
-
-    <rect x="892" y="22" width="124" height="28" rx="14" fill="#111729" stroke="#263554" stroke-width="1" />
-    <circle cx="910" cy="36" r="3" fill="#d946ef">
-      <animate attributeName="opacity" values="0.3;1;0.3" dur="2.1s" repeatCount="indefinite" />
-    </circle>
-    <text x="922" y="40" fill="#94a3b8" font-size="11" class="mono">AUTONOMOUS</text>
-
-    <rect x="1028" y="22" width="132" height="28" rx="14" fill="#111729" stroke="#263554" stroke-width="1" />
-    <circle cx="1046" cy="36" r="3" fill="#34d399">
-      <animate attributeName="opacity" values="1;0.35;1" dur="1.5s" repeatCount="indefinite" />
-    </circle>
-    <text x="1058" y="40" fill="#94a3b8" font-size="11" class="mono">LOW-LATENCY</text>
-
-    <!-- Column headers -->
-    <rect x="40" y="76" width="340" height="30" rx="8" fill="#101a30" stroke="#1e3a5f" stroke-width="1" />
-    <circle cx="58" cy="91" r="4.5" fill="#38bdf8" />
-    <text x="72" y="95" fill="#e0f2fe" font-size="12" font-weight="700" letter-spacing="0.6" class="mono">DÍA · EVALUAR (PRODUCCIÓN)</text>
-
-    <rect x="820" y="76" width="340" height="30" rx="8" fill="#1a122e" stroke="#4a2569" stroke-width="1" />
-    <circle cx="838" cy="91" r="4.5" fill="#d946ef" />
-    <text x="852" y="95" fill="#fae8ff" font-size="12" font-weight="700" letter-spacing="0.6" class="mono">NOCHE · LAB (R&amp;D AUTÓNOMO)</text>
-
-    <!-- ================= BUS TRACES (BEHIND NODES & CORE) ================= -->
-    <!-- Left traces: Day -> Core -->
-    <path d="M 380 164 C 446 164, 446 244, 510 244" fill="none" stroke="#1e2d47" stroke-width="2" />
-    <path d="M 380 164 C 446 164, 446 244, 510 244" fill="none" stroke="url(#dayGrad)" stroke-width="2" stroke-dasharray="6 10" opacity="0.7">
-      <animate attributeName="stroke-dashoffset" from="0" to="-32" dur="1.4s" repeatCount="indefinite" />
-    </path>
-
-    <path d="M 380 276 L 504 276" fill="none" stroke="#1e2d47" stroke-width="2" />
-    <path d="M 380 276 L 504 276" fill="none" stroke="url(#dayGrad)" stroke-width="2" stroke-dasharray="6 10" opacity="0.7">
-      <animate attributeName="stroke-dashoffset" from="0" to="-32" dur="1.2s" repeatCount="indefinite" />
-    </path>
-
-    <path d="M 380 388 C 446 388, 446 308, 510 308" fill="none" stroke="#1e2d47" stroke-width="2" />
-    <path d="M 380 388 C 446 388, 446 308, 510 308" fill="none" stroke="url(#dayGrad)" stroke-width="2" stroke-dasharray="6 10" opacity="0.7">
-      <animate attributeName="stroke-dashoffset" from="0" to="-32" dur="1.6s" repeatCount="indefinite" />
-    </path>
-
-    <!-- Right traces: Core -> Lab -->
-    <path d="M 690 244 C 754 244, 754 164, 820 164" fill="none" stroke="#1e2d47" stroke-width="2" />
-    <path d="M 690 244 C 754 244, 754 164, 820 164" fill="none" stroke="url(#nightGrad)" stroke-width="2" stroke-dasharray="6 10" opacity="0.7">
-      <animate attributeName="stroke-dashoffset" from="0" to="-32" dur="1.5s" repeatCount="indefinite" />
-    </path>
-
-    <path d="M 696 276 L 820 276" fill="none" stroke="#1e2d47" stroke-width="2" />
-    <path d="M 696 276 L 820 276" fill="none" stroke="url(#nightGrad)" stroke-width="2" stroke-dasharray="6 10" opacity="0.7">
-      <animate attributeName="stroke-dashoffset" from="0" to="-32" dur="1.2s" repeatCount="indefinite" />
-    </path>
-
-    <path d="M 690 308 C 754 308, 754 388, 820 388" fill="none" stroke="#1e2d47" stroke-width="2" />
-    <path d="M 690 308 C 754 308, 754 388, 820 388" fill="none" stroke="url(#nightGrad)" stroke-width="2" stroke-dasharray="6 10" opacity="0.7">
-      <animate attributeName="stroke-dashoffset" from="0" to="-32" dur="1.4s" repeatCount="indefinite" />
-    </path>
-
-    <!-- Glowing energy packets traveling along paths -->
-    <circle r="4" fill="#38bdf8" filter="url(#glowCyan)">
-      <animateMotion path="M 380 164 C 446 164, 446 244, 510 244" dur="2.2s" repeatCount="indefinite" />
-    </circle>
-    <circle r="4" fill="#818cf8" filter="url(#glowCyan)">
-      <animateMotion path="M 380 276 L 504 276" dur="1.8s" begin="0.5s" repeatCount="indefinite" />
-    </circle>
-    <circle r="4" fill="#38bdf8" filter="url(#glowCyan)">
-      <animateMotion path="M 380 388 C 446 388, 446 308, 510 308" dur="2.5s" begin="1.1s" repeatCount="indefinite" />
-    </circle>
-
-    <circle r="4" fill="#d946ef" filter="url(#glowPink)">
-      <animateMotion path="M 690 244 C 754 244, 754 164, 820 164" dur="2.4s" begin="0.3s" repeatCount="indefinite" />
-    </circle>
-    <circle r="4" fill="#a855f7" filter="url(#glowPink)">
-      <animateMotion path="M 696 276 L 820 276" dur="1.9s" begin="0.9s" repeatCount="indefinite" />
-    </circle>
-    <circle r="4" fill="#ec4899" filter="url(#glowPink)">
-      <animateMotion path="M 690 308 C 754 308, 754 388, 820 388" dur="2.3s" begin="1.4s" repeatCount="indefinite" />
-    </circle>
-
-    <!-- ================= CENTER CORE ENGINE ================= -->
-    <circle cx="600" cy="276" r="128" fill="url(#coreHalo)">
-      <animate attributeName="r" values="120;136;120" dur="4s" repeatCount="indefinite" />
-    </circle>
-
-    <!-- Top & bottom architecture tags connected to core -->
-    <line x1="600" y1="150" x2="600" y2="180" stroke="#6366f1" stroke-width="1.5" stroke-dasharray="4 4">
-      <animate attributeName="stroke-dashoffset" from="0" to="-16" dur="1.4s" repeatCount="indefinite" />
-    </line>
-    <rect x="498" y="120" width="204" height="30" rx="15" fill="#111729" stroke="#3b4d75" stroke-width="1" />
-    <text x="600" y="139" text-anchor="middle" fill="#c7d2fe" font-size="11" font-weight="600" class="mono">EVENT-DRIVEN CRAFT</text>
-
-    <line x1="600" y1="372" x2="600" y2="402" stroke="#a855f7" stroke-width="1.5" stroke-dasharray="4 4">
-      <animate attributeName="stroke-dashoffset" from="0" to="-16" dur="1.4s" repeatCount="indefinite" />
-    </line>
-    <rect x="492" y="402" width="216" height="30" rx="15" fill="#111729" stroke="#533175" stroke-width="1" />
-    <text x="600" y="421" text-anchor="middle" fill="#e9d5ff" font-size="11" font-weight="600" class="mono">AUTONOMÍA &amp; RESILIENCIA</text>
-
-    <!-- Rotating concentric HUD rings -->
-    <circle cx="600" cy="276" r="96" fill="none" stroke="#818cf8" stroke-width="1.5" stroke-dasharray="14 9" opacity="0.65">
-      <animateTransform attributeName="transform" type="rotate" from="0 600 276" to="360 600 276" dur="28s" repeatCount="indefinite" />
-    </circle>
-    <circle cx="600" cy="276" r="78" fill="none" stroke="#d946ef" stroke-width="2" stroke-dasharray="28 12 6 12" opacity="0.75">
-      <animateTransform attributeName="transform" type="rotate" from="360 600 276" to="0 600 276" dur="18s" repeatCount="indefinite" />
-    </circle>
-    <circle cx="600" cy="276" r="61" fill="none" stroke="#38bdf8" stroke-width="1.4" stroke-dasharray="3 7" opacity="0.7">
-      <animateTransform attributeName="transform" type="rotate" from="0 600 276" to="360 600 276" dur="11s" repeatCount="indefinite" />
-    </circle>
-
-    <!-- Core center disc -->
-    <circle cx="600" cy="276" r="47" fill="#0d1326" stroke="#a855f7" stroke-width="1.8">
-      <animate attributeName="stroke-opacity" values="0.6;1;0.6" dur="2.6s" repeatCount="indefinite" />
-    </circle>
-    <text x="600" y="271" text-anchor="middle" fill="#f8fafc" font-size="13" font-weight="800" letter-spacing="0.8" class="sans">SYSTEMS</text>
-    <text x="600" y="289" text-anchor="middle" fill="#c084fc" font-size="11" font-weight="600" letter-spacing="1.2" class="mono">CORE</text>
-
-    <!-- ================= LEFT NODES: DÍA · EVALUAR ================= -->
-    <!-- Node D1 -->
-    <rect x="40" y="120" width="340" height="88" rx="12" fill="#111729" fill-opacity="0.92" stroke="#243554" stroke-width="1.2" />
-    <rect x="40" y="134" width="4" height="60" rx="2" fill="#38bdf8" />
-    <text x="60" y="155" fill="#f8fafc" font-size="15" font-weight="700" class="sans">Backend &amp; Event Bus</text>
-    <text x="60" y="181" fill="#94a3b8" font-size="12.5" class="mono">Go · Fiber · Watermill</text>
-    <!-- Micro-animation: sliding packet bars -->
-    <rect x="308" y="148" width="48" height="4" rx="2" fill="#1e2d47" />
-    <rect x="308" y="148" width="18" height="4" rx="2" fill="#38bdf8">
-      <animate attributeName="x" values="308;338;308" dur="2.1s" repeatCount="indefinite" />
-    </rect>
-    <rect x="308" y="160" width="48" height="4" rx="2" fill="#1e2d47" />
-    <rect x="330" y="160" width="22" height="4" rx="2" fill="#818cf8">
-      <animate attributeName="x" values="334;308;334" dur="1.7s" repeatCount="indefinite" />
-    </rect>
-    <rect x="308" y="172" width="48" height="4" rx="2" fill="#1e2d47" />
-    <rect x="314" y="172" width="14" height="4" rx="2" fill="#38bdf8">
-      <animate attributeName="x" values="308;342;308" dur="2.5s" repeatCount="indefinite" />
-    </rect>
-
-    <!-- Node D2 -->
-    <rect x="40" y="232" width="340" height="88" rx="12" fill="#111729" fill-opacity="0.92" stroke="#243554" stroke-width="1.2" />
-    <rect x="40" y="246" width="4" height="60" rx="2" fill="#818cf8" />
-    <text x="60" y="267" fill="#f8fafc" font-size="15" font-weight="700" class="sans">Web &amp; Experiencia</text>
-    <text x="60" y="293" fill="#94a3b8" font-size="12.5" class="mono">Nuxt · Vue 3 · TypeScript</text>
-    <!-- Micro-animation: UI pulse matrix -->
-    <rect x="310" y="256" width="14" height="14" rx="3" fill="#818cf8" opacity="0.35">
-      <animate attributeName="opacity" values="0.3;1;0.3" dur="2.2s" repeatCount="indefinite" />
-    </rect>
-    <rect x="328" y="256" width="26" height="14" rx="3" fill="#1e2d47" stroke="#818cf8" stroke-width="1" />
-    <rect x="310" y="274" width="26" height="14" rx="3" fill="#1e2d47" stroke="#38bdf8" stroke-width="1" />
-    <rect x="340" y="274" width="14" height="14" rx="3" fill="#38bdf8" opacity="0.35">
-      <animate attributeName="opacity" values="0.9;0.25;0.9" dur="2.2s" repeatCount="indefinite" />
-    </rect>
-
-    <!-- Node D3 -->
-    <rect x="40" y="344" width="340" height="88" rx="12" fill="#111729" fill-opacity="0.92" stroke="#243554" stroke-width="1.2" />
-    <rect x="40" y="358" width="4" height="60" rx="2" fill="#6366f1" />
-    <text x="60" y="379" fill="#f8fafc" font-size="15" font-weight="700" class="sans">Cloud &amp; Edge Serverless</text>
-    <text x="60" y="405" fill="#94a3b8" font-size="12.5" class="mono">AWS SST · SQS · Cloudflare</text>
-    <!-- Micro-animation: queue nodes pulsing sequentially -->
-    <circle cx="316" cy="388" r="5" fill="#6366f1">
-      <animate attributeName="opacity" values="1;0.25;0.25;1" dur="1.8s" repeatCount="indefinite" />
-    </circle>
-    <circle cx="332" cy="388" r="5" fill="#818cf8">
-      <animate attributeName="opacity" values="0.25;1;0.25;0.25" dur="1.8s" repeatCount="indefinite" />
-    </circle>
-    <circle cx="348" cy="388" r="5" fill="#38bdf8">
-      <animate attributeName="opacity" values="0.25;0.25;1;0.25" dur="1.8s" repeatCount="indefinite" />
-    </circle>
-
-    <!-- ================= RIGHT NODES: NOCHE · LAB ================= -->
-    <!-- Node N1 -->
-    <rect x="820" y="120" width="340" height="88" rx="12" fill="#111729" fill-opacity="0.92" stroke="#362854" stroke-width="1.2" />
-    <rect x="820" y="134" width="4" height="60" rx="2" fill="#a855f7" />
-    <text x="840" y="155" fill="#f8fafc" font-size="15" font-weight="700" class="sans">Agentes &amp; CLI</text>
-    <text x="840" y="181" fill="#94a3b8" font-size="12.5" class="mono">relevo · Worktrees · Multi-LLM QA</text>
-    <!-- Micro-animation: blinking terminal prompt -->
-    <rect x="1100" y="148" width="44" height="30" rx="6" fill="#0b1020" stroke="#4a2569" stroke-width="1" />
-    <text x="1108" y="168" fill="#a855f7" font-size="13" font-weight="700" class="mono">&gt;</text>
-    <rect x="1120" y="166" width="10" height="2.5" fill="#d946ef">
-      <animate attributeName="opacity" values="1;0;1" dur="1s" repeatCount="indefinite" />
-    </rect>
-
-    <!-- Node N2 -->
-    <rect x="820" y="232" width="340" height="88" rx="12" fill="#111729" fill-opacity="0.92" stroke="#362854" stroke-width="1.2" />
-    <rect x="820" y="246" width="4" height="60" rx="2" fill="#d946ef" />
-    <text x="840" y="267" fill="#f8fafc" font-size="15" font-weight="700" class="sans">Audio &amp; Video CUDA</text>
-    <text x="840" y="293" fill="#94a3b8" font-size="12.5" class="mono">Web Audio · Whisper · Remotion</text>
-    <!-- Micro-animation: 5-bar DSP spectrum -->
-    <rect x="1104" y="272" width="4" height="12" rx="1.5" fill="#818cf8">
-      <animate attributeName="height" values="8;22;10;18;8" dur="1.3s" repeatCount="indefinite" />
-      <animate attributeName="y" values="278;264;276;268;278" dur="1.3s" repeatCount="indefinite" />
-    </rect>
-    <rect x="1112" y="266" width="4" height="20" rx="1.5" fill="#a855f7">
-      <animate attributeName="height" values="20;8;24;12;20" dur="1.1s" repeatCount="indefinite" />
-      <animate attributeName="y" values="266;278;262;274;266" dur="1.1s" repeatCount="indefinite" />
-    </rect>
-    <rect x="1120" y="262" width="4" height="24" rx="1.5" fill="#d946ef">
-      <animate attributeName="height" values="12;26;9;22;12" dur="1.5s" repeatCount="indefinite" />
-      <animate attributeName="y" values="274;260;277;264;274" dur="1.5s" repeatCount="indefinite" />
-    </rect>
-    <rect x="1128" y="268" width="4" height="18" rx="1.5" fill="#ec4899">
-      <animate attributeName="height" values="22;10;19;7;22" dur="1.2s" repeatCount="indefinite" />
-      <animate attributeName="y" values="264;276;267;279;264" dur="1.2s" repeatCount="indefinite" />
-    </rect>
-    <rect x="1136" y="274" width="4" height="10" rx="1.5" fill="#38bdf8">
-      <animate attributeName="height" values="10;20;6;16;10" dur="1.4s" repeatCount="indefinite" />
-      <animate attributeName="y" values="276;266;280;270;276" dur="1.4s" repeatCount="indefinite" />
-    </rect>
-
-    <!-- Node N3 -->
-    <rect x="820" y="344" width="340" height="88" rx="12" fill="#111729" fill-opacity="0.92" stroke="#362854" stroke-width="1.2" />
-    <rect x="820" y="358" width="4" height="60" rx="2" fill="#ec4899" />
-    <text x="840" y="379" fill="#f8fafc" font-size="15" font-weight="700" class="sans">Quant &amp; Mobile</text>
-    <text x="840" y="405" fill="#94a3b8" font-size="12.5" class="mono">FastAPI · CCXT · Kotlin KMP</text>
-    <!-- Micro-animation: live quant sparkline -->
-    <polyline points="1096,398 1106,392 1114,395 1124,380 1132,384 1144,370" fill="none" stroke="#34d399" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-    <circle r="3" fill="#34d399" filter="url(#glowCyan)">
-      <animateMotion path="M 1096 398 L 1106 392 L 1114 395 L 1124 380 L 1132 384 L 1144 370" dur="2.2s" repeatCount="indefinite" />
-    </circle>
-
-    <!-- ================= BOTTOM LIVE TELEMETRY STRIP ================= -->
-    <rect x="40" y="468" width="1120" height="64" rx="12" fill="#0d1324" fill-opacity="0.94" stroke="#223150" stroke-width="1.2" />
-
-    <!-- Segment 1: Message Bus -->
-    <text x="64" y="495" fill="#818cf8" font-size="11" font-weight="700" class="mono">MSG BUS</text>
-    <text x="64" y="514" fill="#64748b" font-size="11" class="mono">SQS · Watermill · Asyncio</text>
-    <line x1="238" y1="500" x2="380" y2="500" stroke="#1e2d47" stroke-width="2" />
-    <circle cx="240" cy="500" r="3.5" fill="#38bdf8" filter="url(#glowCyan)">
-      <animate attributeName="cx" values="240;378" dur="1.8s" repeatCount="indefinite" />
-    </circle>
-    <circle cx="240" cy="500" r="3" fill="#818cf8">
-      <animate attributeName="cx" values="240;378" dur="1.8s" begin="0.9s" repeatCount="indefinite" />
-    </circle>
-
-    <line x1="406" y1="482" x2="406" y2="518" stroke="#1e2d47" stroke-width="1" />
-
-    <!-- Segment 2: Procedural Audio Waveform -->
-    <text x="430" y="495" fill="#d946ef" font-size="11" font-weight="700" class="mono">SYNTH // DSP</text>
-    <text x="430" y="514" fill="#64748b" font-size="11" class="mono">Osciladores · CUDA</text>
-    <g clip-path="url(#waveClip)">
-      <path d="M 520 500 Q 535 482, 550 500 T 580 500 T 610 500 T 640 500 T 670 500 T 700 500 T 730 500 T 760 500 T 790 500 T 820 500" fill="none" stroke="#d946ef" stroke-width="2" opacity="0.85">
-        <animateTransform attributeName="transform" type="translate" from="0 0" to="-60 0" dur="1.6s" repeatCount="indefinite" />
-      </path>
-      <path d="M 520 500 Q 540 516, 560 500 T 600 500 T 640 500 T 680 500 T 720 500 T 760 500 T 800 500 T 840 500" fill="none" stroke="#818cf8" stroke-width="1.5" opacity="0.6">
-        <animateTransform attributeName="transform" type="translate" from="-80 0" to="0 0" dur="2.2s" repeatCount="indefinite" />
-      </path>
+    <!-- Drifting tiny pixel cloud -->
+    <g opacity="0.65">
+      <animateTransform attributeName="transform" type="translate" values="290 30; 316 30; 290 30" dur="6s" repeatCount="indefinite" />
+      <g transform="scale(3)">
+        <rect x="2" y="1" width="4" height="1" fill="#94a3b8" />
+        <rect x="1" y="2" width="7" height="1" fill="#cbd5e1" />
+        <rect x="0" y="3" width="9" height="2" fill="#e2e8f0" />
+      </g>
     </g>
 
-    <line x1="786" y1="482" x2="786" y2="518" stroke="#1e2d47" stroke-width="1" />
-
-    <!-- Segment 3: 24/7 Health -->
-    <text x="810" y="495" fill="#34d399" font-size="11" font-weight="700" class="mono">24/7 RUNTIME</text>
-    <text x="810" y="514" fill="#64748b" font-size="11" class="mono">Bots · Cron · Workers</text>
-    <g clip-path="url(#ekgClip)">
-      <polyline points="935,502 965,502 973,495 980,512 989,484 997,510 1004,502 1040,502 1075,502" fill="none" stroke="#34d399" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="140" stroke-dashoffset="140">
-        <animate attributeName="stroke-dashoffset" values="140;0;-140" dur="2.6s" repeatCount="indefinite" />
-      </polyline>
+    <!-- ================= NIGHT HEADER: PIXEL MOON + STARS ================= -->
+    <g transform="translate(818, 24) scale(4)">
+      <rect x="3" y="1" width="3" height="1" fill="#f0abfc" />
+      <rect x="2" y="2" width="2" height="1" fill="#e879f9" />
+      <rect x="1" y="3" width="2" height="3" fill="#e879f9" />
+      <rect x="2" y="6" width="2" height="1" fill="#d946ef" />
+      <rect x="3" y="7" width="3" height="1" fill="#d946ef" />
+      <rect x="6" y="6" width="1" height="1" fill="#d946ef" />
+      <!-- Twinkling stars next to moon -->
+      <rect x="7" y="2" width="1" height="1" fill="#38bdf8">
+        <animate attributeName="opacity" values="1;0.2;1" dur="2s" repeatCount="indefinite" />
+      </rect>
+      <rect x="8" y="4" width="1" height="1" fill="#f8fafc">
+        <animate attributeName="opacity" values="0.2;1;0.2" dur="2.4s" repeatCount="indefinite" />
+      </rect>
     </g>
-    <rect x="1084" y="488" width="56" height="22" rx="11" fill="#0f2922" stroke="#10b981" stroke-width="1" />
-    <text x="1112" y="503" text-anchor="middle" fill="#34d399" font-size="10.5" font-weight="700" class="mono">ACTIVE</text>
+    <text x="870" y="50" fill="#e879f9" font-size="14" font-weight="700" class="mono">NOCHE · LAB</text>
+
+    <rect x="1088" y="34" width="4" height="4" fill="#818cf8">
+      <animate attributeName="opacity" values="0.2;1;0.2" dur="2.1s" repeatCount="indefinite" />
+    </rect>
+    <rect x="1126" y="48" width="4" height="4" fill="#d946ef">
+      <animate attributeName="opacity" values="1;0.2;1" dur="2.7s" repeatCount="indefinite" />
+    </rect>
+
+    <!-- ================= ORTHOGONAL PIXEL PIPES ================= -->
+    <!-- Left pipes -->
+    <path d="M 384 139 L 472 139 L 472 214 L 542 214" fill="none" stroke="#1e3152" stroke-width="4" />
+    <path d="M 384 239 L 542 239" fill="none" stroke="#1e3152" stroke-width="4" />
+    <path d="M 384 339 L 472 339 L 472 264 L 542 264" fill="none" stroke="#1e3152" stroke-width="4" />
+
+    <!-- Right pipes -->
+    <path d="M 658 214 L 728 214 L 728 139 L 816 139" fill="none" stroke="#36224e" stroke-width="4" />
+    <path d="M 658 239 L 816 239" fill="none" stroke="#36224e" stroke-width="4" />
+    <path d="M 658 264 L 728 264 L 728 339 L 816 339" fill="none" stroke="#36224e" stroke-width="4" />
+
+    <!-- Pixel Data Packets traveling along pipes -->
+    <rect x="-4" y="-4" width="8" height="8" fill="#38bdf8">
+      <animateMotion path="M 384 139 L 472 139 L 472 214 L 542 214" dur="2.1s" repeatCount="indefinite" />
+    </rect>
+    <rect x="-4" y="-4" width="8" height="8" fill="#818cf8">
+      <animateMotion path="M 384 239 L 542 239" dur="1.5s" begin="0.4s" repeatCount="indefinite" />
+    </rect>
+    <rect x="-4" y="-4" width="8" height="8" fill="#34d399">
+      <animateMotion path="M 384 339 L 472 339 L 472 264 L 542 264" dur="2.3s" begin="0.9s" repeatCount="indefinite" />
+    </rect>
+
+    <rect x="-4" y="-4" width="8" height="8" fill="#a855f7">
+      <animateMotion path="M 658 214 L 728 214 L 728 139 L 816 139" dur="2.2s" begin="0.3s" repeatCount="indefinite" />
+    </rect>
+    <rect x="-4" y="-4" width="8" height="8" fill="#d946ef">
+      <animateMotion path="M 658 239 L 816 239" dur="1.6s" begin="0.7s" repeatCount="indefinite" />
+    </rect>
+    <rect x="-4" y="-4" width="8" height="8" fill="#ec4899">
+      <animateMotion path="M 658 264 L 728 264 L 728 339 L 816 339" dur="2.1s" begin="1.1s" repeatCount="indefinite" />
+    </rect>
+
+    <!-- ================= CENTER PIXEL COMPUTER / CORE ================= -->
+    <g>
+      <animateTransform attributeName="transform" type="translate" values="0 0; 0 -6; 0 0" dur="2.4s" repeatCount="indefinite" />
+
+      <!-- Orbiting pixel sparks -->
+      <rect x="536" y="182" width="4" height="4" fill="#38bdf8">
+        <animate attributeName="opacity" values="1;0.1;1" dur="1.5s" repeatCount="indefinite" />
+      </rect>
+      <rect x="658" y="186" width="4" height="4" fill="#d946ef">
+        <animate attributeName="opacity" values="0.1;1;0.1" dur="1.7s" repeatCount="indefinite" />
+      </rect>
+      <rect x="540" y="288" width="4" height="4" fill="#a855f7">
+        <animate attributeName="opacity" values="0.2;1;0.2" dur="2s" repeatCount="indefinite" />
+      </rect>
+      <rect x="654" y="290" width="4" height="4" fill="#34d399">
+        <animate attributeName="opacity" values="1;0.2;1" dur="1.4s" repeatCount="indefinite" />
+      </rect>
+
+      <!-- Pixel Retro Monitor Hub (16x14 at scale 6 = 96x84, centered at 600, 239) -->
+      <g transform="translate(552, 195) scale(6)">
+        <!-- Outer monitor frame -->
+        <rect x="1" y="0" width="14" height="1" fill="#3b4d75" />
+        <rect x="0" y="1" width="16" height="10" fill="#1e2945" />
+        <rect x="1" y="1" width="14" height="9" fill="#2b3c66" />
+        <!-- Screen -->
+        <rect x="2" y="2" width="12" height="7" fill="#090d1a" />
+        <!-- Code / face on pixel screen -->
+        <rect x="4" y="4" width="2" height="2" fill="#38bdf8">
+          <animate attributeName="opacity" values="1;1;0;1;1" keyTimes="0;0.82;0.88;0.94;1" dur="3.2s" repeatCount="indefinite" />
+        </rect>
+        <rect x="10" y="4" width="2" height="2" fill="#d946ef">
+          <animate attributeName="opacity" values="1;1;0;1;1" keyTimes="0;0.82;0.88;0.94;1" dur="3.2s" repeatCount="indefinite" />
+        </rect>
+        <rect x="6" y="7" width="4" height="1" fill="#34d399" />
+        <!-- Stand -->
+        <rect x="6" y="11" width="4" height="1" fill="#3b4d75" />
+        <rect x="4" y="12" width="8" height="2" fill="#2b3c66" />
+      </g>
+    </g>
+    <text x="600" y="308" text-anchor="middle" fill="#cbd5e1" font-size="11.5" font-weight="700" class="mono">CRISTIAN // LOOP</text>
+
+    <!-- ================= LEFT PIXEL CARDS (DÍA) ================= -->
+    <!-- D1: Go · Fiber · Watermill -->
+    <rect x="48" y="102" width="340" height="82" fill="#070a14" />
+    <rect x="44" y="98" width="340" height="82" fill="#11182d" stroke="#2a436e" stroke-width="2" />
+    <!-- Pixel Server Sprite -->
+    <g transform="translate(62, 121) scale(4)">
+      <rect x="0" y="1" width="9" height="3" fill="#334155" />
+      <rect x="1" y="2" width="1" height="1" fill="#38bdf8">
+        <animate attributeName="opacity" values="1;0.2;1" dur="1.2s" repeatCount="indefinite" />
+      </rect>
+      <rect x="3" y="2" width="4" height="1" fill="#64748b" />
+      <rect x="0" y="5" width="9" height="3" fill="#334155" />
+      <rect x="1" y="6" width="1" height="1" fill="#34d399">
+        <animate attributeName="opacity" values="0.2;1;0.2" dur="1.5s" repeatCount="indefinite" />
+      </rect>
+      <rect x="3" y="6" width="4" height="1" fill="#64748b" />
+    </g>
+    <text x="114" y="132" fill="#f8fafc" font-size="15" font-weight="700" class="sans">Backend &amp; Colas</text>
+    <text x="114" y="156" fill="#94a3b8" font-size="12.5" class="mono">Go · Fiber · Watermill</text>
+
+    <!-- D2: Nuxt · Vue 3 · TS -->
+    <rect x="48" y="202" width="340" height="82" fill="#070a14" />
+    <rect x="44" y="198" width="340" height="82" fill="#11182d" stroke="#2a436e" stroke-width="2" />
+    <!-- Pixel Browser Sprite -->
+    <g transform="translate(62, 221) scale(4)">
+      <rect x="0" y="0" width="9" height="8" fill="#1e2945" />
+      <rect x="0" y="0" width="9" height="2" fill="#3b4d75" />
+      <rect x="1" y="0" width="1" height="1" fill="#f43f5e" />
+      <rect x="3" y="0" width="1" height="1" fill="#fbbf24" />
+      <rect x="5" y="0" width="1" height="1" fill="#34d399" />
+      <rect x="1" y="3" width="7" height="4" fill="#090d1a" />
+      <rect x="2" y="4" width="3" height="1" fill="#818cf8" />
+      <rect x="2" y="6" width="2" height="1" fill="#38bdf8">
+        <animate attributeName="width" values="2;5;2" dur="2s" repeatCount="indefinite" />
+      </rect>
+    </g>
+    <text x="114" y="232" fill="#f8fafc" font-size="15" font-weight="700" class="sans">Web</text>
+    <text x="114" y="256" fill="#94a3b8" font-size="12.5" class="mono">Nuxt · Vue 3 · TypeScript</text>
+
+    <!-- D3: AWS SST · SQS · Cloudflare -->
+    <rect x="48" y="302" width="340" height="82" fill="#070a14" />
+    <rect x="44" y="298" width="340" height="82" fill="#11182d" stroke="#2a436e" stroke-width="2" />
+    <!-- Pixel Cloud + Lightning Sprite -->
+    <g transform="translate(62, 321) scale(4)">
+      <rect x="2" y="0" width="4" height="1" fill="#93c5fd" />
+      <rect x="1" y="1" width="7" height="1" fill="#bfdbfe" />
+      <rect x="0" y="2" width="9" height="2" fill="#e0f2fe" />
+      <!-- Animated pixel bolt -->
+      <g fill="#fbbf24">
+        <animate attributeName="opacity" values="1;0.2;1" dur="1.4s" repeatCount="indefinite" />
+        <rect x="4" y="4" width="2" height="1" />
+        <rect x="3" y="5" width="2" height="1" />
+        <rect x="4" y="6" width="2" height="1" />
+        <rect x="3" y="7" width="1" height="1" />
+      </g>
+    </g>
+    <text x="114" y="332" fill="#f8fafc" font-size="15" font-weight="700" class="sans">Cloud &amp; Edge</text>
+    <text x="114" y="356" fill="#94a3b8" font-size="12.5" class="mono">AWS SST · SQS · Cloudflare</text>
+
+    <!-- ================= RIGHT PIXEL CARDS (NOCHE) ================= -->
+    <!-- N1: Agentes & CLI -->
+    <rect x="820" y="102" width="340" height="82" fill="#070a14" />
+    <rect x="816" y="98" width="340" height="82" fill="#151129" stroke="#4c2c6e" stroke-width="2" />
+    <!-- Pixel Robot Sprite -->
+    <g transform="translate(834, 121) scale(4)">
+      <rect x="4" y="0" width="1" height="1" fill="#d946ef">
+        <animate attributeName="opacity" values="1;0.1;1" dur="1.1s" repeatCount="indefinite" />
+      </rect>
+      <rect x="4" y="1" width="1" height="1" fill="#64748b" />
+      <rect x="1" y="2" width="7" height="5" fill="#475569" />
+      <rect x="2" y="3" width="5" height="3" fill="#090d1a" />
+      <rect x="3" y="4" width="1" height="1" fill="#38bdf8">
+        <animate attributeName="opacity" values="1;1;0;1;1" keyTimes="0;0.84;0.9;0.96;1" dur="3.1s" repeatCount="indefinite" />
+      </rect>
+      <rect x="5" y="4" width="1" height="1" fill="#38bdf8">
+        <animate attributeName="opacity" values="1;1;0;1;1" keyTimes="0;0.84;0.9;0.96;1" dur="3.1s" repeatCount="indefinite" />
+      </rect>
+      <rect x="2" y="7" width="5" height="1" fill="#334155" />
+    </g>
+    <text x="886" y="132" fill="#f8fafc" font-size="15" font-weight="700" class="sans">Agentes &amp; CLI</text>
+    <text x="886" y="156" fill="#94a3b8" font-size="12.5" class="mono">relevo · git worktrees</text>
+
+    <!-- N2: Audio & Video CUDA -->
+    <rect x="820" y="202" width="340" height="82" fill="#070a14" />
+    <rect x="816" y="198" width="340" height="82" fill="#151129" stroke="#4c2c6e" stroke-width="2" />
+    <!-- Animated Pixel Equalizer Sprite -->
+    <g transform="translate(834, 221) scale(4)">
+      <rect x="0" y="4" width="2" height="4" fill="#818cf8">
+        <animate attributeName="height" values="3;7;4;6;3" dur="1.3s" repeatCount="indefinite" />
+        <animate attributeName="y" values="5;1;4;2;5" dur="1.3s" repeatCount="indefinite" />
+      </rect>
+      <rect x="3" y="2" width="2" height="6" fill="#a855f7">
+        <animate attributeName="height" values="6;3;8;4;6" dur="1.1s" repeatCount="indefinite" />
+        <animate attributeName="y" values="2;5;0;4;2" dur="1.1s" repeatCount="indefinite" />
+      </rect>
+      <rect x="6" y="1" width="2" height="7" fill="#d946ef">
+        <animate attributeName="height" values="4;8;3;7;4" dur="1.5s" repeatCount="indefinite" />
+        <animate attributeName="y" values="4;0;5;1;4" dur="1.5s" repeatCount="indefinite" />
+      </rect>
+    </g>
+    <text x="886" y="232" fill="#f8fafc" font-size="15" font-weight="700" class="sans">Audio &amp; Video CUDA</text>
+    <text x="886" y="256" fill="#94a3b8" font-size="12.5" class="mono">Web Audio · Whisper · NVENC</text>
+
+    <!-- N3: Quant & Mobile -->
+    <rect x="820" y="302" width="340" height="82" fill="#070a14" />
+    <rect x="816" y="298" width="340" height="82" fill="#151129" stroke="#4c2c6e" stroke-width="2" />
+    <!-- Pulsing Pixel Heart Sprite (for Mori + Quant) -->
+    <g transform="translate(834, 323)">
+      <g>
+        <animateTransform attributeName="transform" type="translate" values="0 0; 0 -4; 0 0" dur="1.4s" repeatCount="indefinite" />
+        <g transform="scale(4)">
+          <rect x="1" y="0" width="2" height="1" fill="#ec4899" />
+          <rect x="5" y="0" width="2" height="1" fill="#ec4899" />
+          <rect x="0" y="1" width="8" height="2" fill="#f43f5e" />
+          <rect x="1" y="1" width="1" height="1" fill="#fda4af" />
+          <rect x="1" y="3" width="6" height="1" fill="#e11d48" />
+          <rect x="2" y="4" width="4" height="1" fill="#e11d48" />
+          <rect x="3" y="5" width="2" height="1" fill="#be123c" />
+        </g>
+      </g>
+    </g>
+    <text x="886" y="332" fill="#f8fafc" font-size="15" font-weight="700" class="sans">Quant &amp; Mobile</text>
+    <text x="886" y="356" fill="#94a3b8" font-size="12.5" class="mono">FastAPI · CCXT · Kotlin KMP</text>
   </g>
 
-  <rect x="0.5" y="0.5" width="1199" height="559" rx="16" fill="none" stroke="#1e2d47" stroke-width="1" />
+  <!-- Crisp Pixel Border -->
+  <g shape-rendering="crispEdges">
+    <rect x="1" y="1" width="1198" height="418" fill="none" stroke="#253456" stroke-width="2" />
+    <rect x="4" y="4" width="6" height="6" fill="#38bdf8" />
+    <rect x="1190" y="4" width="6" height="6" fill="#d946ef" />
+    <rect x="4" y="410" width="6" height="6" fill="#818cf8" />
+    <rect x="1190" y="410" width="6" height="6" fill="#ec4899" />
+  </g>
 </svg>
